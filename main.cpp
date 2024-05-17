@@ -1,21 +1,27 @@
-#include "cmath"
-#include "iomanip"
-#include "iostream"
-#include "vector"
-#include "fstream"
-#include "filesystem"
+#include <cmath>
+#include <iomanip>
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <filesystem>
 
 using namespace std;
 
 //迭代次数限制
 #define time_limit 100000
 
+//方程式
+struct equations {
+    //系数
+    long double coefficient = 0;
+    //幂
+    long double power = 0;
+};
+
 class all {
 public:
-    //存储参数的数组
-    vector<long double> coefficient;
-    //存储幂的数组
-    vector<long double> power;
+    //方程式数组
+    vector<equations> equ{};
     //答案
     long double answer = 0;
     //迭代次数
@@ -28,13 +34,11 @@ public:
         fstream file("BlazeSnow 解方程.txt", ios::in);
         if (file.is_open()) {
             //读取文件
-            long double temp1;
-            long double temp2;
+            equations temp{};
             for (int i = 0;; i++) {
-                file >> temp1;
-                coefficient.push_back(temp1);
-                file >> temp2;
-                power.push_back(temp2);
+                file >> temp.coefficient;
+                file >> temp.power;
+                equ.push_back(temp);
                 if (file.eof()) {
                     break;
                 }
@@ -46,12 +50,12 @@ public:
             cout << "文件路径：" << path << endl;
             //输出原方程
             cout << "方程：f(x) = ";
-            for (int i = 0; i < coefficient.size(); i++) {
+            for (auto &i: equ) {
                 cout << setiosflags(ios::showpos);
-                cout << coefficient[i];
+                cout << i.coefficient;
                 cout << resetiosflags(ios::showpos);
                 cout << " x ";
-                cout << power[i] << " ";
+                cout << i.power << " ";
             }
             cout << endl;
             //输入精度
@@ -82,8 +86,8 @@ public:
     //计算函数的答案
     long double get_fx(long double x) {
         long double y = 0;
-        for (int i = 0; i < coefficient.size(); i++) {
-            y += coefficient[i] * (pow(x, power[i]));
+        for (auto &i: equ) {
+            y += i.coefficient * (pow(x, i.power));
         }
         return y;
     }
@@ -145,8 +149,8 @@ private:
     //计算导数的答案
     long double get_derivation(long double x) {
         long double y = 0;
-        for (int i = 0; i < coefficient.size(); i++) {
-            y += (coefficient[i] * power[i]) * (pow(x, power[i] - 1));
+        for (auto &i: equ) {
+            y += (i.coefficient * i.power) * (pow(x, i.power - 1));
         }
         return y;
     }
