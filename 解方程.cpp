@@ -20,10 +20,8 @@ struct equations{
 
 class all {
 public:
-    //存储参数的数组
-    vector<long double> coefficient;
-    //存储幂的数组
-    vector<long double> power;
+    //方程式数组
+    vector<equations> equ;
     //答案
     long double answer = 0;
     //迭代次数
