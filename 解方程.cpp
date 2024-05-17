@@ -1,14 +1,22 @@
-#include "cmath"
-#include "iomanip"
-#include "iostream"
-#include "vector"
-#include "fstream"
-#include "filesystem"
+#include <cmath>
+#include <iomanip>
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <filesystem>
 
 using namespace std;
 
 //迭代次数限制
 #define time_limit 100000
+
+//方程式
+struct equations{
+    //系数
+    long double coefficient;
+    //幂
+    long double power;
+};
 
 class all {
 public:
