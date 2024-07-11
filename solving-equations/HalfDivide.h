@@ -1,7 +1,7 @@
 #ifndef SOLVING_EQUATIONS_HALFDIVIDE_H
 #define SOLVING_EQUATIONS_HALFDIVIDE_H
 
-#include "equations.h"
+#include "solving-equations.h"
 #include <iostream>
 
 using std::cin;
