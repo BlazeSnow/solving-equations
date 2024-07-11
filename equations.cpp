@@ -8,7 +8,7 @@
 using namespace std;
 
 void all::input() {
-    fstream file("BlazeSnow 解方程.txt", ios::in);
+    fstream file("sloving-equations.txt", ios::in);
     if (file.is_open()) {
         //读取文件
         equations temp{};
