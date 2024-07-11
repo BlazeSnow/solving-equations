@@ -1,4 +1,4 @@
-#include "solving-equations.hpp"
+#include "solving-equations.h"
 #include <iostream>
 #include <fstream>
 #include <filesystem>

@@ -1,7 +1,7 @@
-#ifndef SOLVING_EQUATIONS_SOLVING_EQUATIONS_HPP
-#define SOLVING_EQUATIONS_SOLVING_EQUATIONS_HPP
+#ifndef SOLVING_EQUATIONS_SOLVING_EQUATIONS_H
+#define SOLVING_EQUATIONS_SOLVING_EQUATIONS_H
 
-#include "solving-equations.hpp"
+#include "solving-equations.h"
 #include <iostream>
 #include <fstream>
 #include <filesystem>
@@ -34,4 +34,4 @@ class Newton;
 //弦截法
 class Secant_method;
 
-#endif //SOLVING_EQUATIONS_SOLVING_EQUATIONS_HPP
+#endif //SOLVING_EQUATIONS_SOLVING_EQUATIONS_H

@@ -8,5 +8,5 @@ include_directories(.)
 add_executable(solving_equations
         main.cpp
         solving-equations.cpp
-        solving-equations.hpp
+        solving-equations.h
 )
