@@ -1,15 +1,4 @@
 #include <iostream>
-#include <fstream>
-#include <filesystem>
-#include <vector>
-
-using std::cout;
-using std::endl;
-using std::cin;
-using std::vector;
-using std::fstream;
-using std::ios;
-using std::setprecision;
 
 #include "equations.h"
 

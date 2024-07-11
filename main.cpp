@@ -1,15 +1,9 @@
-#include <cmath>
-#include <iomanip>
 #include <iostream>
-#include <vector>
 #include <fstream>
 #include <filesystem>
-#include "equations.h"
 #include "HalfDivide-solving-equations.h"
 #include "Secant_method-solving-equations.h"
 #include "Newton-sloving-equations.h"
-
-using namespace std;
 
 int main() {
     fstream file("BlazeSnow 解方程.txt", ios::in);
