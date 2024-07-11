@@ -7,6 +7,14 @@
 #include <vector>
 #include <cmath>
 
+using std::cout;
+using std::endl;
+using std::cin;
+using std::vector;
+using std::fstream;
+using std::ios;
+using std::setprecision;
+
 struct equations {
     //系数
     long double coefficient;
@@ -17,7 +25,7 @@ struct equations {
 class all {
 public:
     //方程式数组
-    vector<equations> equ;
+    vector<equations> equ{};
     //答案
     long double answer;
     //迭代次数
