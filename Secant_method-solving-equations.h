@@ -5,7 +5,7 @@
 
 class Secant_method : public all {
 public:
-    void main();
+    void main(){};
 
 private:
     long double x0 = 0;

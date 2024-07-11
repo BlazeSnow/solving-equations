@@ -5,7 +5,7 @@
 
 class Newton : public all {
 public:
-    void main();
+    void main(){};
 
 private:
     //计算导数的答案

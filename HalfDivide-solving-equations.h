@@ -5,7 +5,7 @@
 
 class HalfDivide : public all {
 public:
-    void main();
+    void main(){};
 
 private:
     //判断输入的a和b的结果是否为一正一负
