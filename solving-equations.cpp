@@ -1,4 +1,3 @@
-#include "solving-equations.h"
 #include <iostream>
 #include <fstream>
 #include <filesystem>
@@ -30,11 +29,11 @@ public:
     //方程式数组
     vector<equations> equ{};
     //答案
-    long double answer;
+    long double answer = 0;
     //迭代次数
-    int times;
+    int times = 0;
     //保留小数位数
-    int precisionNumber;
+    int precisionNumber = 1;
 
     //输入文件中的数据到数组
     void input() {
