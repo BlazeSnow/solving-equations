@@ -1,7 +1,9 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
-#include "solving-equations/all.h"
+#include "solving-equations/HalfDivide.h"
+#include "solving-equations/Newton.h"
+#include "solving-equations/Secant_method.h"
 
 using namespace std;
 
@@ -15,11 +17,11 @@ int main() {
         cout << "使用二分法(0)，牛顿迭代法(1)，弦截法(2)：";
         cin >> panduan;
         if (panduan == 0) {
-            main();
+            HalfDivide();
         } else if (panduan == 1) {
-            main();
+            Newton();
         } else if (panduan == 2) {
-            main();
+            Secant_method();
         } else {
             cout << "ERROR:输入内容不合法，请重新开始程序" << endl;
             return -1;

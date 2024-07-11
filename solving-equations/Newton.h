@@ -1,7 +1,7 @@
 #ifndef SOLVING_EQUATIONS_NEWTON_H
 #define SOLVING_EQUATIONS_NEWTON_H
 
-int main() ;
+void Newton() ;
 
 long double get_derivation(long double x);
 

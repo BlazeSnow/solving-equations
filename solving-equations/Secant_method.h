@@ -1,7 +1,7 @@
 #ifndef SOLVING_EQUATIONS_SECANT_METHOD_H
 #define SOLVING_EQUATIONS_SECANT_METHOD_H
 
-int main();
+void Secant_method();
 
 long double x0 = 0;
 long double x1 = 0;

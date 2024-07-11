@@ -1,7 +1,7 @@
 #include "all.h"
 #include "Newton.h"
 
-int main() {
+void Newton() {
     input();
     //开始运算
     cout << "请输入初值：";

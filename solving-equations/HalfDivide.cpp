@@ -1,7 +1,7 @@
 #include "all.h"
 #include "HalfDivide.h"
 
-int main() {
+void HalfDivide() {
     input();
     //输入二分法的最开始的两个数
     long double a, b;
