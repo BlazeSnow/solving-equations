@@ -3,7 +3,7 @@
 
 #include "equations.h"
 
-class HalfDivide : all {
+class HalfDivide : public all {
 public:
     void main();
 

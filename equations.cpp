@@ -92,7 +92,8 @@ public:
     long double get_fx(long double x) {
         long double y = 0;
         for (auto &i: equ) {
-            y += i.coefficient * (pow(x, i.power));
+            long double middle = pow(x, i.power);
+            y += i.coefficient * middle;
         }
         return y;
     }

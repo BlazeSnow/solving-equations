@@ -3,7 +3,7 @@
 #include "equations.h"
 
 //弦截法
-class Secant_method : all {
+class Secant_method : public all {
 public:
     void main() {
         input();

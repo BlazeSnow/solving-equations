@@ -4,7 +4,7 @@
 #include "equations.h"
 
 //牛顿迭代法
-class Newton : all {
+class Newton : public all {
 public:
     void main() {
         input();

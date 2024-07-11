@@ -3,7 +3,7 @@
 
 #include "equations.h"
 
-class Newton : all {
+class Newton : public all {
 public:
     void main();
 
