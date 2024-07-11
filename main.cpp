@@ -5,8 +5,10 @@
 #include "Secant_method-solving-equations.h"
 #include "Newton-sloving-equations.h"
 
+using namespace std;
+
 int main() {
-    fstream file("BlazeSnow 解方程.txt", ios::in);
+    fstream file("sloving-equations.txt", ios::in);
     if (file.is_open()) {
         //如果有文件
         file.close();
@@ -29,10 +31,10 @@ int main() {
         }
     } else {
         //如果没有文件
-        fstream file1("BlazeSnow 解方程.txt", ios::out);
+        fstream file1("sloving-equations.txt", ios::out);
         if (file1.is_open()) {
             file1.close();
-            cout << "已创建新文件\"BlazeSnow 解方程.txt\"。" << endl;
+            cout << "已创建新文件\"sloving-equations.txt\"。" << endl;
             //打印文件路径,path变量用于存储路径
             std::filesystem::path path = std::filesystem::current_path();
             cout << "文件路径:" << path << endl;
