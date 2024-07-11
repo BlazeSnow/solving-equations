@@ -19,6 +19,8 @@ struct solving {
     long double power = 0;
 };
 
+void solving_equations();
+
 class all {
 public:
     //方程式数组

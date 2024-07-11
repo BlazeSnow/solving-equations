@@ -5,7 +5,31 @@
 #include <iostream>
 #include <cmath>
 
+#include "solving-equations/HalfDivide.h"
+#include "solving-equations/Newton.h"
+#include "solving-equations/Secant_method.h"
+
 using namespace std;
+
+void solving_equations() {
+    //判断使用哪种方法
+    int panduan = -1;
+    cout << "使用二分法(0)，牛顿迭代法(1)，弦截法(2)：";
+    cin >> panduan;
+    if (panduan == 0) {
+        HalfDivide a;
+        a.main();
+    } else if (panduan == 1) {
+        Newton a;
+        a.main();
+    } else if (panduan == 2) {
+        Secant_method a;
+        a.main();
+    } else {
+        cout << "ERROR:输入内容不合法，请重新开始程序" << endl;
+        abort();
+    }
+}
 
 void all::input() {
     fstream file("sloving-equations.txt", ios::in);
