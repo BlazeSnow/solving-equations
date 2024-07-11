@@ -13,6 +13,6 @@ add_executable(solving_equations
         solving-equations/Newton.h
         solving-equations/Secant_method.cpp
         solving-equations/Secant_method.h
-        equations.cpp
-        equations.h
+        solving-equations/solving-equations.cpp
+        solving-equations/solving-equations.h
 )

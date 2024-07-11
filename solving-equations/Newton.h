@@ -1,7 +1,7 @@
 #ifndef SOLVING_EQUATIONS_NEWTON_H
 #define SOLVING_EQUATIONS_NEWTON_H
 
-#include "equations.h"
+#include "solving-equations.h"
 #include <iostream>
 #include <cmath>
 

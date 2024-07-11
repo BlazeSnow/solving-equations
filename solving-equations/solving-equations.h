@@ -1,5 +1,5 @@
-#ifndef SOLVING_EQUATIONS_EQUATIONS_H
-#define SOLVING_EQUATIONS_EQUATIONS_H
+#ifndef SOLVING_EQUATIONS_SOLVING_EQUATIONS_H
+#define SOLVING_EQUATIONS_SOLVING_EQUATIONS_H
 
 #include <vector>
 #include <iostream>
@@ -12,7 +12,7 @@ using std::endl;
 #define time_limit 100000
 
 //方程式
-struct equations {
+struct solving {
     //系数
     long double coefficient = 0;
     //幂
@@ -22,7 +22,7 @@ struct equations {
 class all {
 public:
     //方程式数组
-    vector<equations> equ{};
+    vector<solving> equ{};
     //答案
     long double answer = 0;
     //迭代次数
@@ -43,4 +43,4 @@ public:
     long double get_fx(long double x);
 };
 
-#endif //SOLVING_EQUATIONS_EQUATIONS_H
+#endif //SOLVING_EQUATIONS_SOLVING_EQUATIONS_H

@@ -1,7 +1,7 @@
 #ifndef SOLVING_EQUATIONS_SECANT_METHOD_H
 #define SOLVING_EQUATIONS_SECANT_METHOD_H
 
-#include "equations.h"
+#include "solving-equations.h"
 #include <iostream>
 
 using std::cin;

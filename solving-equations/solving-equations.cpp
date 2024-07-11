@@ -1,4 +1,4 @@
-#include "equations.h"
+#include "solving-equations.h"
 
 #include <fstream>
 #include <filesystem>
@@ -11,7 +11,7 @@ void all::input() {
     fstream file("sloving-equations.txt", ios::in);
     if (file.is_open()) {
         //读取文件
-        equations temp{};
+        solving temp{};
         for (int i = 0;; i++) {
             file >> temp.coefficient;
             file >> temp.power;
