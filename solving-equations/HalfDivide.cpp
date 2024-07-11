@@ -1,7 +1,6 @@
-#include "all.h"
 #include "HalfDivide.h"
 
-void HalfDivide() {
+void HalfDivide::main() {
     input();
     //输入二分法的最开始的两个数
     long double a, b;
@@ -17,12 +16,15 @@ void HalfDivide() {
     }
     //二分法主程序
     while (true) {
+        answer = (a + b) / 2;
         if (get_fx(a) == 0.0) {
             //左值为结果
+            answer = a;
             putOutAnswer();
             break;
         } else if (get_fx(b) == 0.0) {
             //右值为结果
+            answer = b;
             putOutAnswer();
             break;
         } else if (get_fx(answer) == 0.0) {
@@ -31,16 +33,16 @@ void HalfDivide() {
             break;
         } else if (equation_judgment(a, answer)) {
             //二分法中值取代右值
+            b = answer;
         } else if (equation_judgment(answer, b)) {
             //二分法中值取代左值
+            a = answer;
         }
         timeLimit();
     }
 }
 
-
-//判断输入的a和b的结果是否为一正一负
-bool equation_judgment(long double a, long double b) {
+bool HalfDivide::equation_judgment(const long double a, const long double b) {
     long double answer_a = get_fx(a);
     long double answer_b = get_fx(b);
     if (((answer_a <= 0) && (answer_b >= 0)) || (answer_a >= 0) && (answer_b <= 0)) {

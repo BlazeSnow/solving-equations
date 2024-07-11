@@ -1,11 +1,14 @@
-#include "all.h"
+#include "equations.h"
 
-//迭代次数限制
-#define time_limit 100000
+#include <fstream>
+#include <filesystem>
+#include <iostream>
+#include <cmath>
 
-//输入文件中的数据到数组
-void input() {
-    fstream file("sloving-equations.txt", ios::in);
+using namespace std;
+
+void all::input() {
+    fstream file("BlazeSnow 解方程.txt", ios::in);
     if (file.is_open()) {
         //读取文件
         equations temp{};
@@ -41,14 +44,12 @@ void input() {
     }
 }
 
-//输出答案和迭代次数
-void putOutAnswer() {
+void all::putOutAnswer() const {
     cout << "answer = " << answer << endl;
     cout << "迭代次数" << times << "次" << endl;
 }
 
-//迭代次数++以及判断是否超出限制
-void timeLimit() {
+void all::timeLimit() {
     times++;
     if (times > time_limit) {
         cout << "迭代次数超过" << 10000000 << "次" << endl;
@@ -57,12 +58,10 @@ void timeLimit() {
     }
 }
 
-//计算函数的答案
-long double get_fx(long double x) {
+long double all::get_fx(long double x) {
     long double y = 0;
     for (auto &i: equ) {
-        long double middle = pow(x, i.power);
-        y += i.coefficient * middle;
+        y += i.coefficient * (pow(x, i.power));
     }
     return y;
 }
