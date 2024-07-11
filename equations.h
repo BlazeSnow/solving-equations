@@ -1,6 +1,12 @@
 #ifndef SOLVING_EQUATIONS_EQUATIONS_H
 #define SOLVING_EQUATIONS_EQUATIONS_H
 
+#include <iostream>
+#include <fstream>
+#include <filesystem>
+#include <vector>
+#include <cmath>
+
 struct equations {
     //系数
     long double coefficient;
@@ -11,7 +17,7 @@ struct equations {
 class all {
 public:
     //方程式数组
-    vector<equations> equ{};
+    vector<equations> equ;
     //答案
     long double answer;
     //迭代次数

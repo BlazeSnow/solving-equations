@@ -6,79 +6,10 @@
 #include <filesystem>
 #include "equations.h"
 #include "HalfDivide-solving-equations.h"
+#include "Secant_method-solving-equations.h"
+#include "Newton-sloving-equations.h"
 
 using namespace std;
-
-class all;
-
-//弦截法
-class Secant_method : all {
-public:
-    void main() {
-        input();
-        cout << "请输入x0和x1：" << endl;
-        cin >> x0 >> x1;
-        while (true) {
-            long double temp;
-            temp = get_Secant(x0, x1);
-            x0 = x1;
-            x1 = temp;
-            if (x0 == x1) {
-                answer = x1;
-                putOutAnswer();
-                break;
-            } else {
-                timeLimit();
-            }
-        }
-    }
-
-private:
-    long double x0 = 0;
-    long double x1 = 0;
-
-    //弦截法
-    long double get_Secant(long double num0, long double num1) {
-        long double answer;
-        answer = num1 - get_fx(num1) * (num1 - num0) / (get_fx(num1) - get_fx(num0));
-        return answer;
-    }
-};
-
-//牛顿迭代法
-class Newton : all {
-public:
-    void main() {
-        input();
-        //开始运算
-        cout << "请输入初值：";
-        cin >> answer;
-        while (true) {
-            if (equation_newton(answer) == answer) {
-                putOutAnswer();
-                break;
-            }
-            answer = equation_newton(answer);
-            timeLimit();
-        }
-    }
-
-private:
-    //计算导数的答案
-    long double get_derivation(long double x) {
-        long double y = 0;
-        for (auto &i: equ) {
-            y += (i.coefficient * i.power) * (pow(x, i.power - 1));
-        }
-        return y;
-    }
-
-    //计算牛顿迭代的结果
-    long double equation_newton(long double x) {
-        long double answer = x - (get_fx(x) / get_derivation(x));
-        return answer;
-    }
-};
 
 int main() {
     fstream file("BlazeSnow 解方程.txt", ios::in);

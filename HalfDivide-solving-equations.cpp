@@ -2,7 +2,6 @@
 #include <fstream>
 #include <filesystem>
 #include <vector>
-#include <cmath>
 
 using std::cout;
 using std::endl;
@@ -12,12 +11,9 @@ using std::fstream;
 using std::ios;
 using std::setprecision;
 
-#include "HalfDivide-solving-equations.h"
 #include "equations.h"
 
-class all;
-
-class HalfDivide : public all {
+class HalfDivide : all {
 public:
     void main() {
         input();

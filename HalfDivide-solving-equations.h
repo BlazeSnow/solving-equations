@@ -1,16 +1,15 @@
 #ifndef SOLVING_EQUATIONS_HALFDIVIDE_SOLVING_EQUATIONS_H
 #define SOLVING_EQUATIONS_HALFDIVIDE_SOLVING_EQUATIONS_H
 
-#include <iostream>
-#include <fstream>
-#include <filesystem>
-#include <vector>
-#include <cmath>
-#include "HalfDivide-solving-equations.h"
 #include "equations.h"
 
-class all;
+class HalfDivide : all {
+public:
+    void main();
 
-class HalfDivide : public all;
+private:
+    //判断输入的a和b的结果是否为一正一负
+    bool equation_judgment(long double a, long double b);
+};
 
 #endif //SOLVING_EQUATIONS_HALFDIVIDE_SOLVING_EQUATIONS_H
