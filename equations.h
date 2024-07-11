@@ -1,0 +1,8 @@
+#ifndef SOLVING_EQUATIONS_EQUATIONS_H
+#define SOLVING_EQUATIONS_EQUATIONS_H
+
+struct equations;
+
+class all;
+
+#endif //SOLVING_EQUATIONS_EQUATIONS_H

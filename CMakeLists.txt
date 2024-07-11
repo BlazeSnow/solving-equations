@@ -6,4 +6,9 @@ set(CMAKE_CXX_STANDARD 26)
 include_directories(.)
 
 add_executable(solving_equations
-        main.cpp)
+        main.cpp
+        HalfDivide-solving-equations.cpp
+        HalfDivide-solving-equations.h
+        equations.cpp
+        equations.h
+)
