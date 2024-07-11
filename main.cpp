@@ -17,11 +17,14 @@ int main() {
         cout << "使用二分法(0)，牛顿迭代法(1)，弦截法(2)：";
         cin >> panduan;
         if (panduan == 0) {
-            HalfDivide();
+            HalfDivide a;
+            a.main();
         } else if (panduan == 1) {
-            Newton();
+            Newton a;
+            a.main();
         } else if (panduan == 2) {
-            Secant_method();
+            Secant_method a;
+            a.main();
         } else {
             cout << "ERROR:输入内容不合法，请重新开始程序" << endl;
             return -1;
