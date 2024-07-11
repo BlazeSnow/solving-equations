@@ -1,43 +1,60 @@
-#include "HalfDivide-solving-equations.h"
+#include <iostream>
+#include <fstream>
+#include <filesystem>
+#include <vector>
+#include <cmath>
 
-class HalfDivide : all {
+using std::cout;
+using std::endl;
+using std::cin;
+using std::vector;
+using std::fstream;
+using std::ios;
+using std::setprecision;
+
+#include "HalfDivide-solving-equations.h"
+#include "equations.h"
+
+class all;
+
+class HalfDivide : public all {
 public:
     void main() {
         input();
-        //ÊäÈë¶þ·Ö·¨µÄ×î¿ªÊ¼µÄÁ½¸öÊý
+        //è¾“å…¥äºŒåˆ†æ³•çš„æœ€å¼€å§‹çš„ä¸¤ä¸ªæ•°
         long double a, b;
         while (true) {
-            cout << "ÇëÊäÈëÔËËã·¶Î§a b£º";
+            cout << "è¯·è¾“å…¥è¿ç®—èŒƒå›´a bï¼š";
             cin >> a;
             cin >> b;
             if (equation_judgment(a, b)) {
                 break;
             } else {
-                cout << "ERROR:a bÈ¡Öµ´íÎó£¬ÇëÖØÐÂÊäÈë" << endl;
+                cout << "ERROR:a bå–å€¼é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥" << endl;
             }
         }
-        //¶þ·Ö·¨Ö÷³ÌÐò
+        //äºŒåˆ†æ³•ä¸»ç¨‹åº
         while (true) {
             answer = (a + b) / 2;
             if (get_fx(a) == 0.0) {
-                //×óÖµÎª½á¹û
+                //å·¦å€¼ä¸ºç»“æžœ
                 answer = a;
                 putOutAnswer();
                 break;
             } else if (get_fx(b) == 0.0) {
-                //ÓÒÖµÎª½á¹û
+                //å³å€¼ä¸ºç»“æžœ
                 answer = b;
                 putOutAnswer();
                 break;
             } else if (get_fx(answer) == 0.0) {
-                //¶þ·Ö·¨·Öµ½½á¹û
+                //äºŒåˆ†æ³•åˆ†åˆ°ç»“æžœ
                 putOutAnswer();
                 break;
             } else if (equation_judgment(a, answer)) {
-                //¶þ·Ö·¨ÖÐÖµÈ¡´úÓÒÖµ
+                //äºŒåˆ†æ³•ä¸­å€¼å–ä»£å³å€¼
                 b = answer;
             } else if (equation_judgment(answer, b)) {
-                //¶þ·Ö·¨ÖÐÖµÈ¡´ú×óÖµ
+                //äºŒåˆ†æ³•ä¸­å€¼å–ä»£å·¦å€¼
                 a = answer;
             }
             timeLimit();
@@ -45,7 +62,7 @@ public:
     }
 
 private:
-    //ÅÐ¶ÏÊäÈëµÄaºÍbµÄ½á¹ûÊÇ·ñÎªÒ»ÕýÒ»¸º
+    //åˆ¤æ–­è¾“å…¥çš„aå’Œbçš„ç»“æžœæ˜¯å¦ä¸ºä¸€æ­£ä¸€è´Ÿ
     bool equation_judgment(const long double a, const long double b) {
         long double answer_a = get_fx(a);
         long double answer_b = get_fx(b);

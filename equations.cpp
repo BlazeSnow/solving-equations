@@ -12,33 +12,33 @@ using std::fstream;
 using std::ios;
 using std::setprecision;
 
-//µü´ú´ÎÊıÏŞÖÆ
+//è¿­ä»£æ¬¡æ•°é™åˆ¶
 #define time_limit 100000
 
-//·½³ÌÊ½
+//æ–¹ç¨‹å¼
 struct equations {
-    //ÏµÊı
+    //ç³»æ•°
     long double coefficient = 0;
-    //Ãİ
+    //å¹‚
     long double power = 0;
 };
 
 class all {
 public:
-    //·½³ÌÊ½Êı×é
+    //æ–¹ç¨‹å¼æ•°ç»„
     vector<equations> equ{};
-    //´ğ°¸
+    //ç­”æ¡ˆ
     long double answer = 0;
-    //µü´ú´ÎÊı
+    //è¿­ä»£æ¬¡æ•°
     int times = 1;
-    //±£ÁôĞ¡ÊıÎ»Êı
+    //ä¿ç•™å°æ•°ä½æ•°
     int precisionNumber = 0;
 
-    //ÊäÈëÎÄ¼şÖĞµÄÊı¾İµ½Êı×é
+    //è¾“å…¥æ–‡ä»¶ä¸­çš„æ•°æ®åˆ°æ•°ç»„
     void input() {
-        fstream file("BlazeSnow ½â·½³Ì.txt", ios::in);
+        fstream file("BlazeSnow è§£æ–¹ç¨‹.txt", ios::in);
         if (file.is_open()) {
-            //¶ÁÈ¡ÎÄ¼ş
+            //è¯»å–æ–‡ä»¶
             equations temp{};
             for (int i = 0;; i++) {
                 file >> temp.coefficient;
@@ -49,12 +49,12 @@ public:
                 }
             }
             file.close();
-            //Êä³öÂ·¾¶
-            cout << "¶ÁÈ¡ÎÄ¼ş³É¹¦" << endl;
+            //è¾“å‡ºè·¯å¾„
+            cout << "è¯»å–æ–‡ä»¶æˆåŠŸ" << endl;
             std::filesystem::path path = std::filesystem::current_path();
-            cout << "ÎÄ¼şÂ·¾¶£º" << path << endl;
-            //Êä³öÔ­·½³Ì
-            cout << "·½³Ì£ºf(x) = ";
+            cout << "æ–‡ä»¶è·¯å¾„ï¼š" << path << endl;
+            //è¾“å‡ºåŸæ–¹ç¨‹
+            cout << "æ–¹ç¨‹ï¼šf(x) = ";
             for (auto &i: equ) {
                 cout << setiosflags(ios::showpos);
                 cout << i.coefficient;
@@ -63,32 +63,32 @@ public:
                 cout << i.power << " ";
             }
             cout << endl;
-            //ÊäÈë¾«¶È
-            cout << "ÊäÈë¾«¶È£¨±£Áô¼¸Î»Ğ¡Êı£©£º";
+            //è¾“å…¥ç²¾åº¦
+            cout << "è¾“å…¥ç²¾åº¦ï¼ˆä¿ç•™å‡ ä½å°æ•°ï¼‰ï¼š";
             cin >> precisionNumber;
             long double precision = pow(10, -precisionNumber);
             cout << setprecision(precisionNumber);
-            cout << "¾«¶ÈÎª" << precision << endl;
+            cout << "ç²¾åº¦ä¸º" << precision << endl;
         }
     }
 
-    //Êä³ö´ğ°¸ºÍµü´ú´ÎÊı
+    //è¾“å‡ºç­”æ¡ˆå’Œè¿­ä»£æ¬¡æ•°
     void putOutAnswer() const {
         cout << "answer = " << answer << endl;
-        cout << "µü´ú´ÎÊı" << times << "´Î" << endl;
+        cout << "è¿­ä»£æ¬¡æ•°" << times << "æ¬¡" << endl;
     }
 
-    //µü´ú´ÎÊı++ÒÔ¼°ÅĞ¶ÏÊÇ·ñ³¬³öÏŞÖÆ
+    //è¿­ä»£æ¬¡æ•°++ä»¥åŠåˆ¤æ–­æ˜¯å¦è¶…å‡ºé™åˆ¶
     void timeLimit() {
         times++;
         if (times > time_limit) {
-            cout << "µü´ú´ÎÊı³¬¹ı" << 10000000 << "´Î" << endl;
-            cout << "ÒÑÖÕÖ¹³ÌĞò" << endl;
+            cout << "è¿­ä»£æ¬¡æ•°è¶…è¿‡" << 10000000 << "æ¬¡" << endl;
+            cout << "å·²ç»ˆæ­¢ç¨‹åº" << endl;
             abort();
         }
     }
 
-    //¼ÆËãº¯ÊıµÄ´ğ°¸
+    //è®¡ç®—å‡½æ•°çš„ç­”æ¡ˆ
     long double get_fx(long double x) {
         long double y = 0;
         for (auto &i: equ) {
