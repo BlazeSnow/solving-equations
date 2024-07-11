@@ -1,0 +1,8 @@
+#ifndef SOLVING_EQUATIONS_MAIN_H
+#define SOLVING_EQUATIONS_MAIN_H
+
+class all{
+
+};
+
+#endif //SOLVING_EQUATIONS_MAIN_H

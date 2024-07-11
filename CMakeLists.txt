@@ -7,6 +7,7 @@ include_directories(.)
 
 add_executable(solving_equations
         main.cpp
+        main.h
         solving-equations/HalfDivide.cpp
         solving-equations/HalfDivide.h
         solving-equations/Newton.cpp
