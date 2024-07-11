@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <iostream>
+#include "main.h"
 
 using std::vector;
 using std::cout;
@@ -21,7 +22,7 @@ struct solving {
 
 void solving_equations();
 
-class all {
+class solving_equations:all {
 public:
     //方程式数组
     vector<solving> equ{};

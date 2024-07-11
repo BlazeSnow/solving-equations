@@ -31,7 +31,7 @@ void solving_equations() {
     }
 }
 
-void all::input() {
+void solving_equations::input() {
     fstream file("sloving-equations.txt", ios::in);
     if (file.is_open()) {
         //读取文件
@@ -68,12 +68,12 @@ void all::input() {
     }
 }
 
-void all::putOutAnswer() const {
+void solving_equations::putOutAnswer() const {
     cout << "answer = " << answer << endl;
     cout << "迭代次数" << times << "次" << endl;
 }
 
-void all::timeLimit() {
+void solving_equations::timeLimit() {
     times++;
     if (times > time_limit) {
         cout << "迭代次数超过" << 10000000 << "次" << endl;
@@ -82,7 +82,7 @@ void all::timeLimit() {
     }
 }
 
-long double all::get_fx(long double x) {
+long double solving_equations::get_fx(long double x) {
     long double y = 0;
     for (auto &i: equ) {
         y += i.coefficient * (pow(x, i.power));

@@ -6,7 +6,7 @@
 
 using std::cin;
 
-class HalfDivide : all {
+class HalfDivide : solving_equations {
 public:
     void main();
 

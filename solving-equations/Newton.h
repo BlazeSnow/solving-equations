@@ -8,13 +8,13 @@
 using std::cin;
 
 //牛顿迭代法
-class Newton : all {
+class Newton : solving_equations {
 public:
     void main();
 
 private:
     //计算导数的答案
-    long double get_derivation(long double x) ;
+    long double get_derivation(long double x);
 
     //计算牛顿迭代的结果
     long double equation_newton(long double x);
