@@ -1,9 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
-#include "HalfDivide-solving-equations.h"
-#include "Secant_method-solving-equations.h"
-#include "Newton-sloving-equations.h"
+#include "solving-equations.hpp"
 
 using namespace std;
 
