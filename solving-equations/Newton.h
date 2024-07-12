@@ -10,10 +10,10 @@ public:
 
 private:
     //计算导数的答案
-    long double get_derivation(const equations &equations, long double x);
+    static long double get_derivation(const equations &equations, long double x);
 
     //计算牛顿迭代的结果
-    long double equation_newton(const equations &equations, long double x);
+    static long double equation_newton(const equations &equations, long double x);
 };
 
 #endif //SOLVING_EQUATIONS_NEWTON_H

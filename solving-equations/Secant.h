@@ -10,7 +10,7 @@ public:
 
 private:
     //弦截法
-    long double get_Secant(const equations &equations, long double num0, long double num1);
+    static long double get_Secant(const equations &equations, long double num0, long double num1);
 };
 
 #endif //SOLVING_EQUATIONS_SECANT_H

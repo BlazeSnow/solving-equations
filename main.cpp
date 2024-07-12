@@ -92,7 +92,7 @@ solving_equations::solving_equations() {
     }
 }
 
-void solving_equations::putOutAnswer(equations equations, solving_equations_data data) const {
+void solving_equations::putOutAnswer(const equations& equations, solving_equations_data data) {
     cout << "answer = " << equations.answer << endl;
     cout << "迭代次数" << data.times << "次" << endl;
 }
@@ -106,7 +106,7 @@ void solving_equations::timeLimit(solving_equations_data data) {
     }
 }
 
-long double solving_equations::get_fx(equations equations, long double x) {
+long double solving_equations::get_fx(const equations& equations, long double x) {
     long double y = 0;
     for (auto &i: equations.equ) {
         y += i.coefficient * (pow(x, i.power));

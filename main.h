@@ -34,13 +34,13 @@ public:
     solving_equations();
 
     //输出答案和迭代次数
-    void putOutAnswer(equations equations, solving_equations_data data) const;
+    static void putOutAnswer(const equations& equations, solving_equations_data data) ;
 
     //迭代次数++以及判断是否超出限制
-    void timeLimit(solving_equations_data data);
+    static void timeLimit(solving_equations_data data);
 
     //计算函数的答案
-    long double get_fx(equations equations, long double x);
+    static long double get_fx(const equations& equations, long double x);
 };
 
 #endif //SOLVING_EQUATIONS_MAIN_H
