@@ -19,17 +19,17 @@ void HalfDivide::HalfDivideDo() {
     //二分法主程序
     while (true) {
         answer = (a + b) / 2;
-        if (get_fx(a) == 0.0) {
+        if (get_fx(a) == 0) {
             //左值为结果
             answer = a;
             putOutAnswer();
             break;
-        } else if (get_fx(b) == 0.0) {
+        } else if (get_fx(b) == 0) {
             //右值为结果
             answer = b;
             putOutAnswer();
             break;
-        } else if (get_fx(answer) == 0.0) {
+        } else if (get_fx(answer) == 0) {
             //二分法分到结果
             putOutAnswer();
             break;
