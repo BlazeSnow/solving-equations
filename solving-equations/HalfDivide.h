@@ -5,7 +5,7 @@
 
 class HalfDivide : public solving_equations {
 public:
-    void HalfDivideDo();
+    HalfDivide();
 
 private:
     //判断输入的a和b的结果是否为一正一负

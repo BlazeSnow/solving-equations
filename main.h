@@ -14,7 +14,7 @@ struct solving {
 class solving_equations {
 public:
     //方程式数组
-    std::vector<solving> equ;
+    std::vector<solving> equ{};
     //答案
     long double answer = 0;
     //保留小数位数
@@ -26,7 +26,7 @@ public:
 
     void input();
 
-    void choose();
+    solving_equations();
 
     //输出答案和迭代次数
     void putOutAnswer() const;

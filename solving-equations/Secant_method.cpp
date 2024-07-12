@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void Secant_method::Secant_method_Do() {
+Secant_method::Secant_method() {
     cout << "请输入x0和x1：" << endl;
     cin >> x0 >> x1;
     while (true) {
@@ -22,5 +22,5 @@ void Secant_method::Secant_method_Do() {
 }
 
 long double Secant_method::get_Secant(long double num0, long double num1) {
-    return num1 - get_fx(num1) * (num1 - num0) / (get_fx(num1) - get_fx(num0));
+    return (num1 - get_fx(num1) * (num1 - num0) / (get_fx(num1) - get_fx(num0)));
 }

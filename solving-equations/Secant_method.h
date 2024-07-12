@@ -6,7 +6,7 @@
 //弦截法
 class Secant_method : public solving_equations {
 public:
-    void Secant_method_Do();
+    Secant_method();
 
 private:
     long double x0 = 0;
