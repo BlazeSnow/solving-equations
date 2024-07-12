@@ -44,9 +44,9 @@ void HalfDivide::HalfDivideDo() {
     }
 }
 
-bool HalfDivide::equation_judgment(const long double a, const long double b) {
-    long double answer_a = get_fx(a);
-    long double answer_b = get_fx(b);
+bool HalfDivide::equation_judgment(long double a, long double b) {
+    const long double answer_a = get_fx(a);
+    const long double answer_b = get_fx(b);
     if (((answer_a <= 0) && (answer_b >= 0)) || (answer_a >= 0) && (answer_b <= 0)) {
         return true;
     } else {
