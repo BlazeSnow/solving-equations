@@ -1,15 +1,12 @@
 #ifndef SOLVING_EQUATIONS_SECANT_METHOD_H
 #define SOLVING_EQUATIONS_SECANT_METHOD_H
 
-#include "solving-equations.h"
-#include <iostream>
-
-using std::cin;
+#include "main.h"
 
 //弦截法
-class Secant_method : solving_equations {
+class Secant_method : public solving_equations {
 public:
-    void main();
+    Secant_method();
 
 private:
     long double x0 = 0;

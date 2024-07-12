@@ -1,16 +1,12 @@
 #ifndef SOLVING_EQUATIONS_NEWTON_H
 #define SOLVING_EQUATIONS_NEWTON_H
 
-#include "solving-equations.h"
-#include <iostream>
-#include <cmath>
-
-using std::cin;
+#include "main.h"
 
 //牛顿迭代法
-class Newton : solving_equations {
+class Newton : public solving_equations {
 public:
-    void main();
+    Newton();
 
 private:
     //计算导数的答案

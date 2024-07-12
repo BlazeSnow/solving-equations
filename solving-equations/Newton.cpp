@@ -1,6 +1,10 @@
 #include "Newton.h"
+#include <iostream>
+#include <cmath>
 
-void Newton::main() {
+using namespace std;
+
+Newton::Newton() {
     input();
     //开始运算
     cout << "请输入初值：";

@@ -1,6 +1,9 @@
 #include "Secant_method.h"
+#include <iostream>
 
-void Secant_method::main() {
+using namespace std;
+
+Secant_method::Secant_method() {
     input();
     cout << "请输入x0和x1：" << endl;
     cin >> x0 >> x1;
@@ -20,7 +23,5 @@ void Secant_method::main() {
 }
 
 long double Secant_method::get_Secant(long double num0, long double num1) {
-    long double answer;
-    answer = num1 - get_fx(num1) * (num1 - num0) / (get_fx(num1) - get_fx(num0));
-    return answer;
+    return num1 - get_fx(num1) * (num1 - num0) / (get_fx(num1) - get_fx(num0));
 }
