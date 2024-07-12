@@ -4,7 +4,6 @@
 using namespace std;
 
 Secant_method::Secant_method() {
-    input();
     cout << "请输入x0和x1：" << endl;
     cin >> x0 >> x1;
     while (true) {

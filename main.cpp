@@ -29,9 +29,8 @@ int main() {
         if (file1.is_open()) {
             file1.close();
             cout << "已创建新文件\"sloving-equations.txt\"。" << endl;
-            //打印文件路径,path变量用于存储路径
-            std::filesystem::path path = std::filesystem::current_path();
-            cout << "文件路径:" << path << endl;
+            //打印文件路径
+            cout << "文件路径:" << std::filesystem::current_path() << endl;
         } else {
             //创建文件失败
             cout << "ERROR:创建文件失败" << endl;
@@ -42,16 +41,17 @@ int main() {
 }
 
 solving_equations::solving_equations() {
+    input();
     //判断使用哪种方法
     int panduan = -1;
-    cout << "使用二分法(0)，牛顿迭代法(1)，弦截法(2)：";
+    cout << "使用二分法(0)，牛顿迭代法(1)，弦截法(2)：" << endl;
     cin >> panduan;
     if (panduan == 0) {
-        HalfDivide a;
+        HalfDivide();
     } else if (panduan == 1) {
-        Newton a;
+        Newton();
     } else if (panduan == 2) {
-        Secant_method a;
+        Secant_method();
     } else {
         cout << "ERROR:输入内容不合法，请重新开始程序" << endl;
         abort();
