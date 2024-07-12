@@ -2,6 +2,7 @@
 #include <fstream>
 #include <filesystem>
 #include <valarray>
+#include <cstring>
 #include "main.h"
 #include "solving-equations/HalfDivide.h"
 #include "solving-equations/Newton.h"
@@ -18,7 +19,11 @@ int main() {
         cout << "您需要解方程(0)、求微分(1)还是求积分(2)：" << endl;
         cin >> choose;
         if (choose == 0) {
-            solving_equations a;
+            solving_equations *a = new solving_equations;
+            memset(a, 0, sizeof(solving_equations));
+            a->choose();
+            sizeof a;
+            delete a;
         } else {
             cout << "ERROR:输入不合法，请重新开始程序" << endl;
             return -1;
@@ -40,18 +45,24 @@ int main() {
     return 0;
 }
 
-solving_equations::solving_equations() {
+void solving_equations::choose() {
     input();
     //判断使用哪种方法
-    int panduan = -1;
+    int panduan;
     cout << "使用二分法(0)，牛顿迭代法(1)，弦截法(2)：" << endl;
     cin >> panduan;
     if (panduan == 0) {
-        HalfDivide a;
+        HalfDivide *a = new HalfDivide;
+        a->HalfDivideDo();
+        delete a;
     } else if (panduan == 1) {
-        Newton a;
+        Newton *a = new Newton;
+        a->NewtonDo();
+        delete a;
     } else if (panduan == 2) {
-        Secant_method a;
+        Secant_method *a = new Secant_method;
+        a->Secant_method_Do();
+        delete a;
     } else {
         cout << "ERROR:输入内容不合法，请重新开始程序" << endl;
         abort();

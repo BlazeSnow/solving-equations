@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Secant_method::Secant_method() {
+void Secant_method::Secant_method_Do() {
     cout << "请输入x0和x1：" << endl;
     cin >> x0 >> x1;
     while (true) {

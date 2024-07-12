@@ -6,7 +6,7 @@
 //牛顿迭代法
 class Newton : public solving_equations {
 public:
-    Newton();
+    void NewtonDo();
 
 private:
     //计算导数的答案

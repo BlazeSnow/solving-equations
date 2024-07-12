@@ -3,7 +3,7 @@
 
 using namespace std;
 
-HalfDivide::HalfDivide() {
+void HalfDivide::HalfDivideDo() {
     //输入二分法的最开始的两个数
     long double a, b;
     while (true) {

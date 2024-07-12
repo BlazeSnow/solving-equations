@@ -4,7 +4,7 @@
 
 using namespace std;
 
-Newton::Newton() {
+void Newton::NewtonDo() {
     //开始运算
     cout << "请输入初值：";
     cin >> answer;
