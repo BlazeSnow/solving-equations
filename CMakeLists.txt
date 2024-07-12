@@ -7,6 +7,6 @@ include_directories(.)
 
 add_executable(solving_equations
         main.cpp
-        solving-equations.cpp
-        solving-equations.h
+        Redistributable/solving-equations.cpp
+        Redistributable/solving-equations.h
 )
