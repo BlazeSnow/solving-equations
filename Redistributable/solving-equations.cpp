@@ -94,7 +94,7 @@ public:
 };
 
 //弦截法
-class Secant_method : all {
+class Secant : all {
 public:
     void main() {
         input();
@@ -236,7 +236,7 @@ int solving_equations() {
             Newton a;
             a.main();
         } else if (panduan == 2) {
-            Secant_method a;
+            Secant a;
             a.main();
         } else {
             cout << "ERROR:输入内容不合法，请重新开始程序" << endl;

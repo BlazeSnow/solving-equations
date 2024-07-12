@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
-#include "solving-equations.h"
+#include "Redistributable/solving-equations.h"
 
 using namespace std;
 
