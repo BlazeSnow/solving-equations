@@ -2,11 +2,12 @@
 #include <fstream>
 #include <filesystem>
 #include <valarray>
+#include "solving-equations.h"
 
 using namespace std;
 
 int main() {
-    fstream file("sloving-equations.txt", ios::in);
+    fstream file("solving-equations.txt", ios::in);
     if (file.is_open()) {
         //如果有文件
         file.close();
@@ -21,10 +22,10 @@ int main() {
         }
     } else {
         //如果没有文件
-        fstream file1("sloving-equations.txt", ios::out);
+        fstream file1("solving-equations.txt", ios::out);
         if (file1.is_open()) {
             file1.close();
-            cout << "已创建新文件\"sloving-equations.txt\"。" << endl;
+            cout << "已创建新文件\"solving-equations.txt\"。" << endl;
             //打印文件路径
             cout << "文件路径:" << std::filesystem::current_path() << endl;
         } else {
