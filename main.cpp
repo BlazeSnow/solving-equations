@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
-#include <valarray>
 #include "solving-equations.h"
 
 using namespace std;
@@ -16,6 +15,8 @@ int main() {
         cin >> choose;
         if (choose == 0) {
             solving_equations();
+        } else if (choose == 1 || choose == 2) {
+            cout << "求微分(1)和求积分(2)正在开发中……" << endl;
         } else {
             cout << "ERROR:输入不合法，请重新开始程序" << endl;
             return -1;
