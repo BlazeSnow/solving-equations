@@ -34,9 +34,7 @@ private:
 
     //弦截法
     long double get_Secant(long double num0, long double num1) {
-        long double answer;
-        answer = num1 - get_fx(num1) * (num1 - num0) / (get_fx(num1) - get_fx(num0));
-        return answer;
+        return num1 - get_fx(num1) * (num1 - num0) / (get_fx(num1) - get_fx(num0));
     }
 };
 
@@ -70,8 +68,7 @@ private:
 
     //计算牛顿迭代的结果
     long double equation_newton(long double x) {
-        long double answer = x - (get_fx(x) / get_derivation(x));
-        return answer;
+        return x - (get_fx(x) / get_derivation(x));
     }
 };
 
