@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
+#include "Redistributable/all.h"
 #include "Redistributable/solving-equations.h"
 
 using namespace std;
