@@ -22,8 +22,7 @@ void solving_equations::input() {
         file.close();
         //输出路径
         cout << "读取文件成功" << endl;
-        std::filesystem::path path = std::filesystem::current_path();
-        cout << "文件路径：" << path << endl;
+        cout << "文件路径：" << std::filesystem::current_path() << endl;
         //输出原方程
         cout << "方程：f(x) = ";
         for (auto &i: equ) {
