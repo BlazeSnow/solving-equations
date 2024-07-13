@@ -137,7 +137,7 @@ int solving_equations() {
         file.close();
         //判断使用哪种方法
         int panduan = -1;
-        cout << "使用二分法(0)，牛顿迭代法(1)，弦截法(2)：" << endl;
+        cout << "二分法(0)，牛顿迭代法(1)，弦截法(2)：" << endl;
         cin >> panduan;
         if (panduan == 0) {
             HalfDivide a;
