@@ -9,4 +9,6 @@ add_executable(solving_equations
         main.cpp
         Redistributable/solving-equations.cpp
         Redistributable/solving-equations.h
+        Redistributable/all.cpp
+        Redistributable/all.h
 )
