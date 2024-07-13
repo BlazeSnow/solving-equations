@@ -7,7 +7,7 @@
 using namespace std;
 
 //弦截法
-class Secant : all {
+class Secant : solving_equations {
 public:
     void main() {
         input();
@@ -41,7 +41,7 @@ private:
 };
 
 //牛顿迭代法
-class Newton : all {
+class Newton : solving_equations {
 public:
     void main() {
         input();
@@ -76,7 +76,7 @@ private:
 };
 
 //二分法
-class HalfDivide : all {
+class HalfDivide : solving_equations {
 public:
     void main() {
         input();

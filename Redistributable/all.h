@@ -16,7 +16,7 @@ struct equations {
     long double power = 0;
 };
 
-class all {
+class solving_equations {
 public:
     //方程式数组
     vector<equations> equ{};
