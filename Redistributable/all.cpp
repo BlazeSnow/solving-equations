@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void solving_equations::input() {
+void all::input() {
     fstream file("solving-equations.txt", ios::in);
     if (file.is_open()) {
         //读取文件

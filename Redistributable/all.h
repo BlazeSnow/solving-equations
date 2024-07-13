@@ -20,6 +20,9 @@ public:
     long double answer = 0;
     //保留小数位数
     int precisionNumber = 0;
+
+    //输入文件中的数据到数组
+    void input();
 };
 
 class solving_equations : public all {
@@ -28,9 +31,6 @@ public:
     const int time_limit = 100000;
     //迭代次数
     int times = 1;
-
-    //输入文件中的数据到数组
-    void input();
 
     //输出答案和迭代次数
     void putOutAnswer() const;
