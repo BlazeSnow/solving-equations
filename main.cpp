@@ -51,8 +51,7 @@ public:
             file.close();
             //输出路径
             cout << "读取文件成功" << endl;
-            std::filesystem::path path = std::filesystem::current_path();
-            cout << "文件路径：" << path << endl;
+            cout << "文件路径：" << std::filesystem::current_path() << endl;
             //输出原方程
             cout << "方程：f(x) = ";
             for (auto &i: equ) {
@@ -76,6 +75,7 @@ public:
     void putOutAnswer() const {
         cout << "answer = " << answer << endl;
         cout << "迭代次数" << times << "次" << endl;
+        system("pause");
     }
 
     //迭代次数++以及判断是否超出限制
@@ -84,6 +84,7 @@ public:
         if (times > time_limit) {
             cout << "迭代次数超过" << 10000000 << "次" << endl;
             cout << "已终止程序" << endl;
+            system("pause");
             abort();
         }
     }
@@ -251,6 +252,7 @@ int main() {
             a.main();
         } else {
             cout << "ERROR:输入内容不合法，请重新开始程序" << endl;
+            system("pause");
             return -1;
         }
     } else {
@@ -261,9 +263,11 @@ int main() {
             cout << "已创建新文件\"solving-equations.txt\"。" << endl;
             //打印文件路径
             cout << "文件路径:" << std::filesystem::current_path() << endl;
+            system("pause");
         } else {
             //创建文件失败
             cout << "ERROR:创建文件失败" << endl;
+            system("pause");
             return -1;
         }
     }
