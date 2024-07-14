@@ -1,11 +1,14 @@
 //Copyright (C) 2024 BlazeSnow
 //保留所有权利
 //本程序以GNU General Public License v3.0的条款发布
+//SetConsoleOutputCP(CP_UTF8);
+//SetConsoleOutputCP(54936);
 #include <cmath>
 #include <iostream>
 #include <fstream>
 #include <filesystem>
 #include <vector>
+#include <windows.h>
 
 using namespace std;
 
@@ -220,8 +223,11 @@ private:
 };
 
 int main() {
+    //SetConsoleOutputCP(CP_UTF8);
+    SetConsoleOutputCP(54936);
     cout << "Copyright (C) 2024 BlazeSnow.保留所有权利。" << endl;
-    cout << "本程序以GNU General Public License v3.0的条款发布。" << endl << endl;
+    cout << "本程序以GNU General Public License v3.0的条款发布。" << endl;
+    cout << "当前程序版本号：v1.0.0" << endl;
     cout << "https://github.com/BlazeSnow/solving-equations" << endl << endl;
     fstream file("solving-equations.txt", ios::in);
     if (file.is_open()) {
