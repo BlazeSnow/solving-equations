@@ -11,11 +11,6 @@
    -1 2 -2.2 1 3 0
    ```
 
-# 程序报错缺少dll
-
-1. 前往微软官方网站下载安装```Visual C++可再发行程序包```的最新版本
-2. 网站地址：<https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist>
-
 # 更新日志
 
 - **2024年7月14日17点05分** - **v1.0.1**
