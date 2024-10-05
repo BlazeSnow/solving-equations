@@ -51,7 +51,7 @@ public:
 			cout << "文件路径：" << std::filesystem::current_path() << endl;
 			//输出原方程
 			cout << "方程：f(x) = ";
-			for (auto &i: equ) {
+			for (auto& i : equ) {
 				cout << setiosflags(ios::showpos);
 				cout << i.coefficient;
 				cout << resetiosflags(ios::showpos);
@@ -82,14 +82,14 @@ public:
 			cout << "迭代次数超过" << 10000000 << "次" << endl;
 			cout << "已终止程序" << endl;
 			system("pause");
-			abort();
+			exit(1);
 		}
 	}
 
 	//计算函数的答案
 	long double get_fx(long double x) {
 		long double y = 0;
-		for (auto &i: equ) {
+		for (auto& i : equ) {
 			y += i.coefficient * (pow(x, i.power));
 		}
 		return y;
@@ -112,7 +112,8 @@ public:
 				answer = x1;
 				putOutAnswer();
 				break;
-			} else {
+			}
+			else {
 				timeLimit();
 			}
 		}
@@ -150,7 +151,7 @@ private:
 	//计算导数的答案
 	long double get_derivation(long double x) {
 		long double y = 0;
-		for (auto &i: equ) {
+		for (auto& i : equ) {
 			y += (i.coefficient * i.power) * (pow(x, i.power - 1));
 		}
 		return y;
@@ -175,7 +176,8 @@ public:
 			cin >> b;
 			if (equation_judgment(a, b)) {
 				break;
-			} else {
+			}
+			else {
 				cout << "ERROR:a b取值错误，请重新输入" << endl;
 			}
 		}
@@ -187,19 +189,23 @@ public:
 				answer = a;
 				putOutAnswer();
 				break;
-			} else if (get_fx(b) == 0.0) {
+			}
+			else if (get_fx(b) == 0.0) {
 				//右值为结果
 				answer = b;
 				putOutAnswer();
 				break;
-			} else if (get_fx(answer) == 0.0) {
+			}
+			else if (get_fx(answer) == 0.0) {
 				//二分法分到结果
 				putOutAnswer();
 				break;
-			} else if (equation_judgment(a, answer)) {
+			}
+			else if (equation_judgment(a, answer)) {
 				//二分法中值取代右值
 				b = answer;
-			} else if (equation_judgment(answer, b)) {
+			}
+			else if (equation_judgment(answer, b)) {
 				//二分法中值取代左值
 				a = answer;
 			}
@@ -214,17 +220,18 @@ private:
 		long double answer_b = get_fx(b);
 		if (((answer_a <= 0) && (answer_b >= 0)) || (answer_a >= 0) && (answer_b <= 0)) {
 			return true;
-		} else {
+		}
+		else {
 			return false;
 		}
 	}
 };
 
 int main() {
-	system("chcp 65001");
+	system("chcp 54936");
 	cout << "Copyright (C) 2024 BlazeSnow.保留所有权利。" << endl;
 	cout << "本程序以GNU General Public License v3.0的条款发布。" << endl;
-	cout << "当前程序版本号：v1.0.2" << endl;
+	cout << "当前程序版本号：v1.0.3" << endl;
 	cout << "https://github.com/BlazeSnow/solving-equations" << endl << endl;
 	fstream file("solving-equations.txt", ios::in);
 	if (file.is_open()) {
@@ -240,18 +247,22 @@ int main() {
 		if (panduan == 0) {
 			HalfDivide a;
 			a.main();
-		} else if (panduan == 1) {
+		}
+		else if (panduan == 1) {
 			Newton a;
 			a.main();
-		} else if (panduan == 2) {
+		}
+		else if (panduan == 2) {
 			Secant a;
 			a.main();
-		} else {
+		}
+		else {
 			cout << "ERROR:输入内容不合法，请重新开始程序" << endl;
 			system("pause");
 			return -1;
 		}
-	} else {
+	}
+	else {
 		//如果没有文件
 		fstream file1("solving-equations.txt", ios::out);
 		if (file1.is_open()) {
@@ -260,7 +271,8 @@ int main() {
 			//打印文件路径
 			cout << "文件路径:" << std::filesystem::current_path() << endl;
 			system("pause");
-		} else {
+		}
+		else {
 			//创建文件失败
 			cout << "ERROR:创建文件失败" << endl;
 			system("pause");
