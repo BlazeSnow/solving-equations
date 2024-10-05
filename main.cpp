@@ -82,7 +82,7 @@ public:
 			cout << "迭代次数超过" << 10000000 << "次" << endl;
 			cout << "已终止程序" << endl;
 			system("pause");
-			abort();
+			exit(1);
 		}
 	}
 
