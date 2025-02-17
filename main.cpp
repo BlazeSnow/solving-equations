@@ -1,4 +1,5 @@
 #include <cmath>
+#include <cstdlib>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -76,7 +77,7 @@ public:
   void timeLimit() {
     times++;
     if (times > time_limit) {
-      cout << "迭代次数超过" << 10000000 << "次" << endl;
+      cout << "迭代次数超过" << time_limit << "次" << endl;
       cout << "已终止程序" << endl;
       system("pause");
       exit(1);
@@ -219,9 +220,9 @@ private:
 };
 
 int main() {
-  system("chcp 54936");
-  cout << "Copyright (C) 2024 BlazeSnow.保留所有权利。" << endl;
-  cout << "本程序以GNU General Public License v3.0的条款发布。" << endl;
+  system("chcp 65001");
+  system("cls");
+  cout << "Copyright (C) 2024-2025 BlazeSnow. 保留所有权利。" << endl;
   cout << "当前程序版本号：v1.0.3" << endl;
   cout << "https://github.com/BlazeSnow/solving-equations" << endl << endl;
   fstream file("solving-equations.txt", ios::in);
