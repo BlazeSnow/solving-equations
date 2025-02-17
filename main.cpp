@@ -223,7 +223,7 @@ int main() {
   system("chcp 65001");
   system("cls");
   cout << "Copyright (C) 2024-2025 BlazeSnow. 保留所有权利。" << endl;
-  cout << "当前程序版本号：v1.0.3" << endl;
+  cout << "当前程序版本号：v1.0.4" << endl;
   cout << "https://github.com/BlazeSnow/solving-equations" << endl << endl;
   fstream file("solving-equations.txt", ios::in);
   if (file.is_open()) {
