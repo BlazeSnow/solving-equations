@@ -5,9 +5,29 @@
 #include <fstream>
 #include <vector>
 
+#ifdef _WIN32
+#include <windows.h>
+#endif
+
 using namespace std;
 
 #define time_limit 100000
+
+void clearConsole() {
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}
+
+void enterToContinue() {
+    printf("按回车键继续...");
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF) {
+    }
+    getchar();
+}
 
 struct equations {
     long double coefficient = 0;
@@ -51,7 +71,7 @@ public:
     void putOutAnswer() const {
         printf("answer = %.*Lf\n", precisionNumber, answer);
         printf("迭代次数%d次\n", times);
-        system("pause");
+        enterToContinue();
     }
 
     void timeLimit() {
@@ -59,7 +79,7 @@ public:
         if (times > time_limit) {
             printf("迭代次数超过%d次\n", time_limit);
             printf("已终止程序\n");
-            system("pause");
+            enterToContinue();
             exit(1);
         }
     }
@@ -181,11 +201,14 @@ private:
 };
 
 int main() {
-    system("chcp 65001");
-    system("cls");
-    printf("Copyright (C) 2024-2026 BlazeSnow. 保留所有权利。\n");
-    printf("当前程序版本号：v1.0.5\n");
-    printf("https://github.com/BlazeSnow/CppWorkspace\n\n");
+#ifdef _WIN32
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+#endif
+
+    clearConsole();
+    printf("Copyright (C) 2024-2026 BlazeSnow.\n");
+    printf("https://github.com/BlazeSnow/solving-equations\n\n");
     fstream file("solving-equations.txt", ios::in);
     if (file.is_open()) {
         file.close();
@@ -206,7 +229,7 @@ int main() {
             a.main();
         } else {
             printf("ERROR:输入内容不合法，请重新开始程序\n");
-            system("pause");
+            enterToContinue();
             return -1;
         }
     } else {
@@ -215,10 +238,10 @@ int main() {
             file1.close();
             printf("已创建新文件\"solving-equations.txt\"。\n");
             printf("文件路径:%s\n", std::filesystem::current_path().string().c_str());
-            system("pause");
+            enterToContinue();
         } else {
             printf("ERROR:创建文件失败\n");
-            system("pause");
+            enterToContinue();
             return -1;
         }
     }
