@@ -15,7 +15,7 @@ struct equations {
 };
 
 class All {
-  public:
+public:
     vector<equations> equ{};
     long double answer = 0;
     int times = 1;
@@ -37,7 +37,7 @@ class All {
             printf("读取文件成功\n");
             printf("文件路径：%s\n", std::filesystem::current_path().string().c_str());
             printf("方程：f(x) = ");
-            for (auto &i : equ) {
+            for (auto &i: equ) {
                 printf("%+Lf x %Lf ", i.coefficient, i.power);
             }
             printf("\n");
@@ -66,7 +66,7 @@ class All {
 
     long double getFx(long double x) {
         long double y = 0;
-        for (auto &i : equ) {
+        for (auto &i: equ) {
             y += i.coefficient * (pow(x, i.power));
         }
         return y;
@@ -74,7 +74,7 @@ class All {
 };
 
 class Secant : public All {
-  public:
+public:
     void main() {
         input();
         printf("请输入x0和x1：\n");
@@ -93,7 +93,7 @@ class Secant : public All {
         }
     }
 
-  private:
+private:
     long double x0 = 0;
     long double x1 = 0;
 
@@ -103,7 +103,7 @@ class Secant : public All {
 };
 
 class Newton : public All {
-  public:
+public:
     void main() {
         input();
         printf("请输入初值：");
@@ -118,10 +118,10 @@ class Newton : public All {
         }
     }
 
-  private:
+private:
     long double getDerivation(long double x) {
         long double y = 0;
-        for (auto &i : equ) {
+        for (auto &i: equ) {
             y += (i.coefficient * i.power) * (pow(x, i.power - 1));
         }
         return y;
@@ -133,7 +133,7 @@ class Newton : public All {
 };
 
 class HalfDivide : public All {
-  public:
+public:
     void main() {
         input();
         long double a, b;
@@ -168,7 +168,7 @@ class HalfDivide : public All {
         }
     }
 
-  private:
+private:
     bool equationJudgment(const long double a, const long double b) {
         long double answer_a = getFx(a);
         long double answer_b = getFx(b);
